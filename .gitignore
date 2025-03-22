@@ -3,6 +3,14 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# Flask backend
+/venv/
+.env
+*.pyc
+*.pyo
+*.pyd
+frontend/build/
+
 # C extensions
 *.so
 
