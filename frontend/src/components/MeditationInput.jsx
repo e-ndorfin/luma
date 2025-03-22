@@ -5,20 +5,40 @@ function MeditationInput() {
   const [situation, setSituation] = useState('')
   const [isLoading, setIsLoading] = useState(false)
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
     console.log('Submitted situation:', situation)
     
     // Show loading screen
     setIsLoading(true)
     
-    // Simulate API call with timeout (replace with actual API call)
-    setTimeout(() => {
-      // After API call completes, you would handle the response
-      // For now, we'll just keep the loading screen for demonstration
-      // In a real app, you would redirect to results or handle errors
-      // setIsLoading(false) // Uncomment to hide loading after the timeout
-    }, 3000)
+    try {
+      const response = await fetch('http://localhost:5000/api/generate', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          prompt: situation
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+
+      const data = await response.json();
+      console.log('API Response:', data);
+      
+      // Here you would handle the response data
+      // For example, redirect to a results page or display the meditation
+      
+    } catch (error) {
+      console.error('Error:', error);
+      // Here you would handle any errors
+    } finally {
+      setIsLoading(false);
+    }
   }
 
   return (

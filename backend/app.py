@@ -45,14 +45,14 @@ def generate_text():
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
-# Production setup for React static files (uncomment when needed)
-# @app.route('/', defaults={'path': ''})
-# @app.route('/<path:path>')
-# def serve(path):
-#     if path != "" and os.path.exists(os.path.join('frontend/build', path)):
-#         return send_from_directory('frontend/build', path)
-#     else:
-#         return send_from_directory('frontend/build', 'index.html')
+# Production setup for React static files
+@app.route('/', defaults={'path': ''})
+@app.route('/<path:path>')
+def serve(path):
+    if path != "" and os.path.exists(os.path.join('frontend/dist', path)):
+        return send_from_directory('frontend/dist', path)
+    else:
+        return send_from_directory('frontend/dist', 'index.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
