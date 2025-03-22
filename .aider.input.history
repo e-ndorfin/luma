@@ -1,0 +1,110 @@
+
+# 2025-03-22 14:26:01.057381
++n
+
+# 2025-03-22 14:27:29.358726
++/ask how would you implement frontend react code with flask backend
+
+# 2025-03-22 14:29:49.579743
++i don't have the react frontend, can you build the flask backend so i can easily integrate with react frontend when my teammate is done?
+
+# 2025-03-22 14:31:32.963335
++/ask is there any special things i need to consider when integrating with flask vs with normal html/css?
+
+# 2025-03-22 14:51:10.125432
++/add . 
+
+# 2025-03-22 14:52:27.918192
++no, it's okay. let's start by adding some scripts for the functionality of the app. firstly, i want to be able to prompt cohere with a normal llm prompt and receive its output. can you implement this and store this somewhere? (you can just store it in a .txt for now)
+
+# 2025-03-22 15:00:50.614747
++/add . 
+
+# 2025-03-22 15:00:58.114221
++/git add .
+
+# 2025-03-22 15:02:04.462565
++exit
+
+# 2025-03-22 15:05:04.429253
++y
+
+# 2025-03-22 15:05:06.485482
++/add backend/
+
+# 2025-03-22 15:06:04.831502
++/ask how do i feed a prompt to the cohere api in app.py?
+
+# 2025-03-22 15:32:07.564229
++/add . 
+
+# 2025-03-22 15:33:02.679109
++/add readme.md 
+
+# 2025-03-22 15:34:19.370400
++can you make a short readme for this project? aiming to make a meditation app (personalized) such that when the user puts in their personal info (e.g. how their day was) we will generate a 10 minute guided meditation mp3 for them to relax. 
+
+# 2025-03-22 15:36:27.531758
++/undo
+
+# 2025-03-22 15:36:38.192410
++/git reset --hard HEAD
+
+# 2025-03-22 15:36:57.410457
++/DROP README.MD
+
+# 2025-03-22 15:37:02.158405
++/drop readme.md
+
+# 2025-03-22 15:37:04.444735
++/add README.md
+
+# 2025-03-22 15:37:37.179480
++can you make a short readme for this project? aiming to make a meditation app (personalized) such that when the user puts in their personal info (e.g. how their day was) w
++. e will generate a 10 minute guided meditation mp3 for them to relax. ONLY CHANGE THE README.
+
+# 2025-03-22 15:38:15.913491
++y
+
+# 2025-03-22 15:43:12.598325
++/add backend/
+
+# 2025-03-22 15:43:29.097392
++/add src/
+
+# 2025-03-22 15:43:48.024997
++alright, now i have the frontend. integrate flask so that i have a main page
+
+# 2025-03-22 15:46:57.537106
++said it can't find package vite failed to load config from /Users/zacharytang/Desktop/Coding/luma/vite.config.js
++error when starting dev server:
++Error [ERR_MODULE_NOT_FOUND]: Cannot find package 'vite' imported from /Users/zacharytang/Desktop/Coding/luma/vite.config.js.timestamp-1742672801638-043aeccb67b98.mjs
++    at packageResolve (node:internal/modules/esm/resolve:854:9)
++    at moduleResolve (node:internal/modules/esm/resolve:927:18)
++    at defaultResolve (node:internal/modules/esm/resolve:1169:11)
++    at ModuleLoader.defaultResolve (node:internal/modules/esm/loader:542:12)
++    at ModuleLoader.resolve (node:internal/modules/esm/loader:510:25)
++    at ModuleLoader.getModuleJob (node:internal/modules/esm/loader:239:38)
++    at ModuleWrap.<anonymous> (node:internal/modules/esm/module_job:96:40)
++    at link (node:internal/modules/esm/module_job:95:36)
+
+# 2025-03-22 15:49:21.155797
++n
+
+# 2025-03-22 15:49:25.217431
++/add backend/
+
+# 2025-03-22 15:49:26.469010
++/add src/
+
+# 2025-03-22 15:49:35.964879
++/tokens 
+
+# 2025-03-22 15:49:57.868974
++/ask read over all the files in src and tell me what they do.
+
+# 2025-03-22 15:51:55.709701
++change only the backend/app.py so that i can display the react frontend through the flask server 
+
+# 2025-03-22 15:52:18.005215
++/ask wait, when demoing this product would i show the npm run dev or would i show through the flask localhost 
