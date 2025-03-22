@@ -6,33 +6,45 @@ Create personalized 10-minute guided meditation sessions based on daily experien
 
 - **Personalized Meditation Scripts** - Generates custom guided meditations from daily journal input
 - **AI-Powered Insights** - Uses Cohere's NLP to analyze mood and stress levels
-- **Session Logging** - Automatically stores all generated sessions in `responses.txt`
-- **API Ready** - CORS-enabled endpoint for easy frontend integration
+- **Clean, Modern UI** - Beautiful purple gradient interface with loading animations
+- **Responsive Design** - Works across all devices
+
+## 📁 Project Structure
+
+```
+luma/
+├── frontend/              # React frontend application
+│   ├── public/            # Static assets
+│   ├── src/               # Source code
+│   │   ├── components/    # React components
+│   │   │   ├── Loading.jsx       # Loading animation component
+│   │   │   ├── Loading.css       # Styling for loading animation
+│   │   │   ├── MeditationInput.jsx # Input form component
+│   │   ├── App.jsx        # Main application component
+│   │   ├── App.css        # Application styling
+│   │   ├── main.jsx       # Entry point
+│   │   ├── index.css      # Global styling
+│   ├── index.html         # HTML template
+│   ├── package.json       # Frontend dependencies
+│   └── vite.config.js     # Vite configuration
+├── backend/               # Flask backend (planned)
+└── README.md             # Documentation
+```
 
 ## 🚀 Quick Start
 
-1. **Setup Backend**
+### Frontend
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+### Backend (Coming Soon)
 ```bash
 cd backend
-echo "COHERE_API_KEY=your_cohere_key_here" > .env
 pip install -r requirements.txt
 python app.py
-```
-
-2. **Generate Meditation** (Example)
-```bash
-curl -X POST http://localhost:5000/api/generate \
-  -H "Content-Type: application/json" \
-  -d '{
-    "prompt": "I had a stressful day with 3 back-to-back meetings and missed lunch. Need to relax."
-  }'
-```
-
-3. **Sample Response**
-```json
-{
-  "response": "Begin by finding a quiet space... [10-minute meditation script]"
-}
 ```
 
 ## 🔜 Roadmap
