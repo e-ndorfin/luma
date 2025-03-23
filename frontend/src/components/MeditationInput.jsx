@@ -21,27 +21,27 @@ function MeditationInput() {
     
     console.log('Loading screen activated')
     
-    // Create a clearly named timeout reference
-    const timeoutId = setTimeout(() => {
-      console.log('Timeout fired after 3 seconds')
+    // // Create a clearly named timeout reference
+    // const timeoutId = setTimeout(() => {
+    //   console.log('Timeout fired after 3 seconds')
       
-      // First hide the loading screen
-      setIsLoading(false)
+    //   // First hide the loading screen
+    //   setIsLoading(false)
       
-      // Then show the output screen
-      setTimeout(() => {
-        setShowOutput(true)
-        console.log('Output screen should now be visible')
-      }, 50) // Small delay to ensure state updates properly
-    }, 3000)
+    //   // Then show the output screen
+    //   setTimeout(() => {
+    //     setShowOutput(true)
+    //     console.log('Output screen should now be visible')
+    //   }, 50) // Small delay to ensure state updates properly
+    // }, 3000)
     
-    // Log that the timeout has been set
-    console.log('Timeout set with ID:', timeoutId)
+    // // Log that the timeout has been set
+    // console.log('Timeout set with ID:', timeoutId)
     
     // Commented out API call for future implementation
-    /*
+    
     try {
-      const response = await fetch('http://localhost:5000/api/generate', {
+      const response = await fetch('http://127.0.0.1:5000/api/generate', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -65,7 +65,9 @@ function MeditationInput() {
       console.error('Error:', error);
       // Here you would handle any errors
     }
-    */
+    setIsLoading(false)
+    setShowOutput(true)
+    
   }
 
   // Log every render

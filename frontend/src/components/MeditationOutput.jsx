@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import './MeditationOutput.css';
 import kanyeImg from '../assets/imgs/kanye.png';
-import runawayAudio from '../assets/play/Runaway.mp3';
+import runawayAudio from '../../../backend/final_output.mp3';
 
 function MeditationOutput() {
   const [isPlaying, setIsPlaying] = useState(false);
